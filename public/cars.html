@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/output.css" rel="stylesheet">
+    <title>Binar Car Rental</title>
+
+</head>
+<body>
+<!-- Header -->
+<header>
+<!-- Header Nav -->
+<nav class="start-0 top-0 z-20 flex w-full justify-center bg-[#f1f3ff]">
+  <div class="container md:w-3/4 w-11/12">
+    <div class="my-8 flex h-9 items-center justify-between py-4">
+      <div class="bg-[#0d28a6] h-9 w-[100px]"></div>
+      <div
+        class="hidden items-center space-x-0 md:flex md:space-x-4 lg:space-x-8"
+      >
+        <ul class="flex space-x-0 md:space-x-4 lg:space-x-8">
+          <li>
+            <a href="#our" class="">Our Services</a>
+          </li>
+          <li>
+            <a href="#why" class="">Why Us</a>
+          </li>
+          <li>
+            <a href="#testimonial" class="">Testimonial</a>
+          </li>
+          <li>
+            <a href="#faq" class="">FAQ</a>
+          </li>
+        </ul>
+        <button type="button">
+          <div class="bg-[#5cb85f] rounded-md px-3 py-2 text-white">
+            Register
+          </div>
+        </button>
+      </div>
+      <button onclick="toggleMenu()" type="button" class="block md:hidden">
+        <i data-feather="menu" class="text-sm font-bold"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Menu Mobile -->
+<menu id="menu" class="fixed inset-0 z-50 hidden h-full w-full">
+  <div
+    class="absolute inset-y-0 left-0 w-1/2 bg-black text-white opacity-60"
+  ></div>
+  <div class="absolute inset-y-0 right-0 w-1/2 bg-white">
+    <div class="m-8 flex items-start justify-between">
+      <div class="space-y-4">
+        <h1 class="text-sm font-bold">BCR</h1>
+        <ul class="space-y-4">
+          <li>
+            <a href="#our" class="">Our Services</a>
+          </li>
+          <li>
+            <a href="#why" class="">Why Us</a>
+          </li>
+          <li>
+            <a href="#testimonial" class="">Testimonial</a>
+          </li>
+          <li>
+            <a href="#faq" class="">FAQ</a>
+          </li>
+        </ul>
+        <button type="button">
+          <div class="bg-[#5cb85f] rounded-sm px-3 py-2 text-white">
+            Register
+          </div>
+        </button>
+      </div>
+      <button onclick="toggleMenu()" type="button" class="block md:hidden">
+        <i data-feather="x" class="text-sm font-bold"></i>
+      </button>
+    </div>
+  </div>
+</menu>
+</header>
+<!-- /Header -->
+
+<!-- Main Section -->
+<section id="main" class="py-10 h-full w-full bg-[#f1f3ff]">
+  <div class="container md:w-3/4 w-11/12 flex flex-wrap items-center mx-auto justify-center md:mt-10">
+    <div class="mb-4 lg:mb-0 lg:w-1/2">
+      <h1 class="md:max-w-xl text-4xl leading-[54px] font-bold max-w-lg mb-5">
+        Sewa & Rental Mobil Terbaik di kawasan (Lokasimu)
+      </h1>
+      <p class="max-w-lg font-light text-[14px] leading-5">Selamat datang di Binar Car Rental. Kami menyediakan mobil kualitas terbaik dengan harga terjangkau. Selalu siap melayani kebutuhanmu untuk sewa mobil selama 24 jam.</p>
+    </div>
+    <div class="lg:w-1/2">
+      <div class="lg:absolute lg:top-0 lg:right-0 lg:mt-28">
+        <img src="./images/img_car.png" alt="Car" class="lg:max-w-lg" />
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /Main Section -->
+
+<section id="search-car" class="relative mb-96 lg:mb-20">
+  <div class="absolute top-0 left-0 right-0 px-6 mx-auto mt-[-10px] lg:w-[1047px] lg:px-0">
+    <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between bg-white rounded-lg shadow-md p-6">
+      <div class="mb-4 lg:mb-0">
+        <p class="font-light text-sm mb-2">Tipe Driver</p>
+        <select name="driver-type" id="driver-type" class="text-neutral-03 border border-gray-300 rounded-sm w-full md:w-52 h-9 mt-2 px-2">
+          <option value="" disabled selected>Pilih Tipe Driver</option>
+          <option value="dengan-sopir">Dengan Sopir</option>
+          <option value="tanpa-sopir">Tanpa Sopir (Lepas Kunci)</option>
+        </select>
+      </div>
+      <div class="mb-4 lg:mb-0">
+        <p class="font-light text-sm mb-2">Tanggal</p>
+        <input type="date" id="date" name="date" class="text-neutral-03 border border-gray-300 rounded-sm w-full md:w-52 h-9 px-2"/>
+      </div>
+      <div class="mb-4 lg:mb-0">
+        <p class="font-light text-sm mb-2">Waktu Jemput/Ambil</p>
+        <select name="pickup-time" id="pickup-time" class="text-neutral-03 border border-gray-300 rounded-sm w-full md:w-52 h-9 px-2">
+          <option value="" disabled selected>Pilih Waktu</option>
+          <option value="08:00:00">08.00 WIB</option>
+          <option value="09:00:00">09.00 WIB</option>
+          <option value="10:00:00">10.00 WIB</option>
+          <option value="11:00:00">11.00 WIB</option>
+          <option value="12:00:00">12.00 WIB</option>
+        </select>
+      </div>
+      <div class="mb-4 lg:mb-0">
+        <p class="font-light text-sm mb-2">Jumlah Penumpang</p>
+        <div class="relative">
+          <input type="number" id="total-passenger" name="total-passenger" class="text-neutral-03 border border-gray-300 rounded-sm w-full md:w-52 h-9 px-2"/>
+        </div>
+      </div>
+      <div>
+        <p class="font-light text-sm mb-6"></p>
+        <button id="search-btn" class="bg-green-500 h-9 hover:bg-green-600 text-white rounded px-4"type="submit">
+          Cari Mobil
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="flex items-center justify-center">
+  <div
+    class="grid grid-cols-1 lg:grid-cols-3 gap-4 p-4"
+    id="cars-container"
+  ></div>
+</div>
+
+<div
+  class="flex items-center justify-center"
+  id="notfound-container"
+></div>
+
+<!-- Footer Section -->
+<footer class="py-20">
+<div class="flex h-full w-full justify-center items-center">
+  <div class="container md:w-3/4 w-11/12 md:flex block justify-between md:space-y-0 space-y-4">
+    <div class="md:w-1/4 w-full">
+      <div class="space-y-4">
+        <p class="text-sm font-light text-black w-[80%] md:w-full">
+          Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000
+        </p>
+        <p class="text-sm font-light text-black">
+          binarcarrental@gmail.com
+        </p>
+        <p class="text-sm font-light text-black">081-233-334-808</p>
+      </div>
+    </div>
+    <div class="w-fit">
+      <div class="space-y-4 flex flex-col">
+        <a href="#our" class="text-sm md:font-light font-normal text-black">Our Services</a>
+        <a href="#why" class="text-sm md:font-light font-normal text-black">Why Us</a>
+        <a href="#testimonial" class="text-sm md:font-light font-normal text-black">Testimonial</a>
+        <a href="#faq" class="text-sm md:font-light font-normal text-black">FAQ</a>
+      </div>
+    </div>
+    <div class="md:w-1/4 w-full">
+      <div class="space-y-4">
+        <p class="text-sm font-light text-black">Connect with us</p>
+        <div class="flex justify-start gap-4">
+          <i
+            data-feather="facebook"
+            class="rounded-full bg-[#0D28A6] text-white p-[5px] stroke-1 w-[32px] h-[32px]"
+          ></i>
+          <i
+            data-feather="instagram"
+            class="rounded-full bg-[#0D28A6] text-white p-[5px] stroke-1 w-[32px] h-[32px]"
+          ></i>
+          <i
+            data-feather="twitter"
+            class="rounded-full bg-[#0D28A6] text-white p-[5px] stroke-1 w-[32px] h-[32px]"
+          ></i>
+          <i
+            data-feather="mail"
+            class="rounded-full bg-[#0D28A6] text-white p-[5px] stroke-1 w-[32px] h-[32px]"
+          ></i>
+          <i
+            data-feather="twitch"
+            class="rounded-full bg-[#0D28A6] text-white p-[5px] stroke-1 w-[32px] h-[32px]"
+          ></i>
+        </div>
+      </div>
+    </div>
+    <div class="md:w-1/4 w-full">
+      <div class="space-y-4">
+        <p class="text-sm font-light text-black">Copyright Binar 2022</p>
+        <div class="bg-[#0D28A6] w-[100px] h-9"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</footer>
+<!-- /Footer Section -->
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Menu -->
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById("menu");
+      if (menu.style.display === "none") {
+        menu.style.display = "block";
+      } else {
+        menu.style.display = "none";
+      }
+    }
+  </script>
+
+  <!-- Feather Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <script>
+    feather.replace()
+  </script>
+  
+  <script type="text/javascript" src="./scripts/binar.js"></script>
+  <script type="text/javascript" src="./scripts/app.js"></script>
+  <script type="text/javascript" src="./scripts/car.js"></script>
+  <script type="text/javascript" src="./scripts/main.example.js"></script>
+</body>
+
+</html>
